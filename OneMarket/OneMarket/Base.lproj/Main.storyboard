@@ -80,6 +80,9 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="7mj-5G-Pys"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="dateLabel" destination="aCw-cK-jbf" id="aac-5p-AXT"/>
+                        <outlet property="locationLabel" destination="Dx5-Mz-OUy" id="6jT-ia-E0U"/>
+                        <outlet property="nameLabel" destination="zxT-Of-AL7" id="wnO-pC-btJ"/>
                         <segue destination="e2h-h3-Z9d" kind="show" identifier="segue:item:edit" id="Y76-de-x5S"/>
                     </connections>
                 </viewController>
