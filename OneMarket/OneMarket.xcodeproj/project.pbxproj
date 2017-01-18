@@ -15,6 +15,7 @@
 		E3FDDE4A1E2FED68002666D3 /* OneMarketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDE491E2FED68002666D3 /* OneMarketTests.swift */; };
 		F1016F811E2FF3BD000BBD63 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1016F801E2FF3BD000BBD63 /* ItemDetailsVC.swift */; };
 		F13C66FE1E2FF66100443D0E /* ItemAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */; };
+		F1A809AE1E30269A004DC2C6 /* ItemEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		E3FDDE4B1E2FED68002666D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1016F801E2FF3BD000BBD63 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
 		F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAddVC.swift; sourceTree = "<group>"; };
+		F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemEditVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				F1016F801E2FF3BD000BBD63 /* ItemDetailsVC.swift */,
 				E3FDDE361E2FED68002666D3 /* ItemListVC.swift */,
 				F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */,
+				F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1A809AE1E30269A004DC2C6 /* ItemEditVC.swift in Sources */,
 				E3FDDE371E2FED68002666D3 /* ItemListVC.swift in Sources */,
 				E3FDDE351E2FED68002666D3 /* AppDelegate.swift in Sources */,
 				F1016F811E2FF3BD000BBD63 /* ItemDetailsVC.swift in Sources */,
