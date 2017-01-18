@@ -16,6 +16,8 @@
 		F1016F811E2FF3BD000BBD63 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1016F801E2FF3BD000BBD63 /* ItemDetailsVC.swift */; };
 		F13C66FE1E2FF66100443D0E /* ItemAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */; };
 		F1A809AE1E30269A004DC2C6 /* ItemEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */; };
+		F1A809B11E302F42004DC2C6 /* SegueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B01E302F42004DC2C6 /* SegueId.swift */; };
+		F1A809B31E302FB1004DC2C6 /* CellId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B21E302FB1004DC2C6 /* CellId.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		F1016F801E2FF3BD000BBD63 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
 		F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAddVC.swift; sourceTree = "<group>"; };
 		F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemEditVC.swift; sourceTree = "<group>"; };
+		F1A809B01E302F42004DC2C6 /* SegueId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueId.swift; sourceTree = "<group>"; };
+		F1A809B21E302FB1004DC2C6 /* CellId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellId.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		E3FDDE331E2FED68002666D3 /* OneMarket */ = {
 			isa = PBXGroup;
 			children = (
+				F1A809AF1E302F35004DC2C6 /* config */,
 				F13C66FF1E2FF67A00443D0E /* controllers */,
 				E3FDDE341E2FED68002666D3 /* AppDelegate.swift */,
 				E3FDDE381E2FED68002666D3 /* Main.storyboard */,
@@ -111,6 +116,15 @@
 				F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */,
 			);
 			name = controllers;
+			sourceTree = "<group>";
+		};
+		F1A809AF1E302F35004DC2C6 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				F1A809B01E302F42004DC2C6 /* SegueId.swift */,
+				F1A809B21E302FB1004DC2C6 /* CellId.swift */,
+			);
+			name = config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +234,9 @@
 			files = (
 				F1A809AE1E30269A004DC2C6 /* ItemEditVC.swift in Sources */,
 				E3FDDE371E2FED68002666D3 /* ItemListVC.swift in Sources */,
+				F1A809B11E302F42004DC2C6 /* SegueId.swift in Sources */,
 				E3FDDE351E2FED68002666D3 /* AppDelegate.swift in Sources */,
+				F1A809B31E302FB1004DC2C6 /* CellId.swift in Sources */,
 				F1016F811E2FF3BD000BBD63 /* ItemDetailsVC.swift in Sources */,
 				F13C66FE1E2FF66100443D0E /* ItemAddVC.swift in Sources */,
 			);

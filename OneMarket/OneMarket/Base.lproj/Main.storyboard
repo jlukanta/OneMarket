@@ -124,8 +124,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit" id="wo6-eL-llw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zoZ-es-3zj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zoZ-es-3zj">
+                            <connections>
+                                <action selector="save:" destination="e2h-h3-Z9d" id="qdU-T2-hTO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateInput" destination="s3E-QK-R1C" id="5yd-Et-qsI"/>
+                        <outlet property="locationInput" destination="Nkl-0N-Vae" id="C0r-oS-RaG"/>
+                        <outlet property="nameInput" destination="Sw1-jq-RRc" id="5oI-1A-79m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vO-j8-p2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
