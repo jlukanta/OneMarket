@@ -18,6 +18,8 @@
 		F1A809AE1E30269A004DC2C6 /* ItemEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */; };
 		F1A809B11E302F42004DC2C6 /* SegueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B01E302F42004DC2C6 /* SegueId.swift */; };
 		F1A809B31E302FB1004DC2C6 /* CellId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B21E302FB1004DC2C6 /* CellId.swift */; };
+		F1A809B61E3031C5004DC2C6 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B51E3031C5004DC2C6 /* ItemService.swift */; };
+		F1A809B91E303351004DC2C6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B81E303351004DC2C6 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemEditVC.swift; sourceTree = "<group>"; };
 		F1A809B01E302F42004DC2C6 /* SegueId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueId.swift; sourceTree = "<group>"; };
 		F1A809B21E302FB1004DC2C6 /* CellId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellId.swift; sourceTree = "<group>"; };
+		F1A809B51E3031C5004DC2C6 /* ItemService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
+		F1A809B81E303351004DC2C6 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		E3FDDE331E2FED68002666D3 /* OneMarket */ = {
 			isa = PBXGroup;
 			children = (
+				F1A809B71E303348004DC2C6 /* models */,
+				F1A809B41E303164004DC2C6 /* services */,
 				F1A809AF1E302F35004DC2C6 /* config */,
 				F13C66FF1E2FF67A00443D0E /* controllers */,
 				E3FDDE341E2FED68002666D3 /* AppDelegate.swift */,
@@ -125,6 +131,22 @@
 				F1A809B21E302FB1004DC2C6 /* CellId.swift */,
 			);
 			name = config;
+			sourceTree = "<group>";
+		};
+		F1A809B41E303164004DC2C6 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				F1A809B51E3031C5004DC2C6 /* ItemService.swift */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		F1A809B71E303348004DC2C6 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F1A809B81E303351004DC2C6 /* Item.swift */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,9 +255,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1A809AE1E30269A004DC2C6 /* ItemEditVC.swift in Sources */,
+				F1A809B91E303351004DC2C6 /* Item.swift in Sources */,
 				E3FDDE371E2FED68002666D3 /* ItemListVC.swift in Sources */,
 				F1A809B11E302F42004DC2C6 /* SegueId.swift in Sources */,
 				E3FDDE351E2FED68002666D3 /* AppDelegate.swift in Sources */,
+				F1A809B61E3031C5004DC2C6 /* ItemService.swift in Sources */,
 				F1A809B31E302FB1004DC2C6 /* CellId.swift in Sources */,
 				F1016F811E2FF3BD000BBD63 /* ItemDetailsVC.swift in Sources */,
 				F13C66FE1E2FF66100443D0E /* ItemAddVC.swift in Sources */,
