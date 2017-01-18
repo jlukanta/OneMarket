@@ -1,6 +1,7 @@
 import UIKit
 
 class ItemListVC: UITableViewController {
+  let addItemSegueId = "segue:item:add"
   let cellIdentifier = "item-cell"
   
   override func viewDidLoad () {
@@ -16,5 +17,9 @@ class ItemListVC: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
     cell.textLabel!.text = "Item #" + String(indexPath.row)
     return cell
+  }
+  
+  @IBAction func add (_ sender: UIBarButtonItem) {
+    performSegue(withIdentifier: addItemSegueId, sender: sender)
   }
 }

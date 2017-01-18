@@ -24,7 +24,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Shopping list" id="l1g-TB-YZR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HSe-Kv-6on"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HSe-Kv-6on">
+                            <connections>
+                                <action selector="add:" destination="vI9-hX-vwg" id="5Sg-QM-vou"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -72,6 +76,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Details" id="lf5-gz-WmX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="7mj-5G-Pys"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="e2h-h3-Z9d" kind="show" identifier="segue:item:edit" id="Y76-de-x5S"/>
                     </connections>
@@ -116,6 +123,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Edit" id="wo6-eL-llw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zoZ-es-3zj"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vO-j8-p2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,6 +167,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New item" id="0sU-nS-jgU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="CVh-VZ-Fog">
+                            <connections>
+                                <action selector="done:" destination="0nO-kK-Wsa" id="388-Wv-rPm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateInput" destination="lQ9-2r-ZaV" id="KuT-TT-4nh"/>
+                        <outlet property="locationInput" destination="KJG-TP-nxu" id="JZu-WN-jGV"/>
+                        <outlet property="nameInput" destination="qD7-Z8-Btr" id="rcD-Q8-VYg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JK3-MH-1uV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -163,7 +163,7 @@
 				TargetAttributes = {
 					E3FDDE301E2FED67002666D3 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = F97K3V2UP7;
+						DevelopmentTeam = 66E473LLXA;
 						ProvisioningStyle = Automatic;
 					};
 					E3FDDE441E2FED68002666D3 = {
@@ -361,7 +361,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F97K3V2UP7;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 66E473LLXA;
 				INFOPLIST_FILE = OneMarket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyingjar.OneMarket;
@@ -374,7 +375,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F97K3V2UP7;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 66E473LLXA;
 				INFOPLIST_FILE = OneMarket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyingjar.OneMarket;
