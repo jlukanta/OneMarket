@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		E3FDDE351E2FED68002666D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDE341E2FED68002666D3 /* AppDelegate.swift */; };
-		E3FDDE371E2FED68002666D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDE361E2FED68002666D3 /* ViewController.swift */; };
+		E3FDDE371E2FED68002666D3 /* ItemListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDE361E2FED68002666D3 /* ItemListVC.swift */; };
 		E3FDDE3A1E2FED68002666D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FDDE381E2FED68002666D3 /* Main.storyboard */; };
 		E3FDDE3C1E2FED68002666D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FDDE3B1E2FED68002666D3 /* Assets.xcassets */; };
 		E3FDDE3F1E2FED68002666D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FDDE3D1E2FED68002666D3 /* LaunchScreen.storyboard */; };
 		E3FDDE4A1E2FED68002666D3 /* OneMarketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDDE491E2FED68002666D3 /* OneMarketTests.swift */; };
+		F1016F811E2FF3BD000BBD63 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1016F801E2FF3BD000BBD63 /* ItemDetailsVC.swift */; };
+		F13C66FE1E2FF66100443D0E /* ItemAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,7 @@
 /* Begin PBXFileReference section */
 		E3FDDE311E2FED68002666D3 /* OneMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FDDE341E2FED68002666D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E3FDDE361E2FED68002666D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3FDDE361E2FED68002666D3 /* ItemListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListVC.swift; sourceTree = "<group>"; };
 		E3FDDE391E2FED68002666D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3FDDE3B1E2FED68002666D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3FDDE3E1E2FED68002666D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		E3FDDE451E2FED68002666D3 /* OneMarketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneMarketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FDDE491E2FED68002666D3 /* OneMarketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneMarketTests.swift; sourceTree = "<group>"; };
 		E3FDDE4B1E2FED68002666D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1016F801E2FF3BD000BBD63 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
+		F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAddVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,8 @@
 		E3FDDE331E2FED68002666D3 /* OneMarket */ = {
 			isa = PBXGroup;
 			children = (
+				F13C66FF1E2FF67A00443D0E /* controllers */,
 				E3FDDE341E2FED68002666D3 /* AppDelegate.swift */,
-				E3FDDE361E2FED68002666D3 /* ViewController.swift */,
 				E3FDDE381E2FED68002666D3 /* Main.storyboard */,
 				E3FDDE3B1E2FED68002666D3 /* Assets.xcassets */,
 				E3FDDE3D1E2FED68002666D3 /* LaunchScreen.storyboard */,
@@ -94,6 +98,16 @@
 				E3FDDE4B1E2FED68002666D3 /* Info.plist */,
 			);
 			path = OneMarketTests;
+			sourceTree = "<group>";
+		};
+		F13C66FF1E2FF67A00443D0E /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1016F801E2FF3BD000BBD63 /* ItemDetailsVC.swift */,
+				E3FDDE361E2FED68002666D3 /* ItemListVC.swift */,
+				F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3FDDE371E2FED68002666D3 /* ViewController.swift in Sources */,
+				E3FDDE371E2FED68002666D3 /* ItemListVC.swift in Sources */,
 				E3FDDE351E2FED68002666D3 /* AppDelegate.swift in Sources */,
+				F1016F811E2FF3BD000BBD63 /* ItemDetailsVC.swift in Sources */,
+				F13C66FE1E2FF66100443D0E /* ItemAddVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +428,7 @@
 				E3FDDE501E2FED68002666D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3FDDE511E2FED68002666D3 /* Build configuration list for PBXNativeTarget "OneMarketTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +437,7 @@
 				E3FDDE531E2FED68002666D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
