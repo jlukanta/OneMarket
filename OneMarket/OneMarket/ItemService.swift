@@ -11,8 +11,8 @@ protocol ItemService: class {
   // Delete an item from storage
   func deleteItem(item: Item)
 
-  // Get an array of all items
-  func getItems(day:Date?) -> [Item]
+  // Get an array of all items sorted by name
+  func getItemsSortedByName(day: Date?) -> [Item]
   
   // Get a single item
   func getItem(id:String) -> Item?
