@@ -41,10 +41,11 @@ class DefaultsItemService: NSObject, ItemService {
   
   func addDate(_ date: Date?) {
     let date = date ?? Date.distantFuture
-    let dates = getDates()
+    var dates = getDates()
     guard !dates.contains(date) else {
       return;
     }
+    dates.append(date)
     setDates(dates: dates)
   }
   
