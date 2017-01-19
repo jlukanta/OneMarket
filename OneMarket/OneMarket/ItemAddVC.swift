@@ -9,7 +9,7 @@ class ItemAddVC: UIViewController {
   public weak var itemService:ItemService!
   
   // The item we're editing
-  var item:Item!
+  private var item:Item!
   
   override func viewDidLoad() {
     super.viewDidLoad()

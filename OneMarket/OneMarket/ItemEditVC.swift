@@ -12,7 +12,7 @@ class ItemEditVC: UIViewController {
   public var itemId:String!
   
   // The item we are editing
-  var item:Item!
+  private var item:Item!
   
   override func viewDidLoad() {
     super.viewDidLoad()
