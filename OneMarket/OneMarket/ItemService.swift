@@ -16,4 +16,7 @@ protocol ItemService: class {
   
   // Get a single item
   func getItem(id:String) -> Item?
+  
+  // Get a (sorted) array of dates that have items assigned to them
+  func getAssignedDates () -> [Date]
 }
