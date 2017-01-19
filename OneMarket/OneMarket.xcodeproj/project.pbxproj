@@ -216,7 +216,7 @@
 					};
 					E3FDDE441E2FED68002666D3 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = F97K3V2UP7;
+						DevelopmentTeam = 66E473LLXA;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E3FDDE301E2FED67002666D3;
 					};
@@ -448,7 +448,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = F97K3V2UP7;
+				DEVELOPMENT_TEAM = 66E473LLXA;
 				INFOPLIST_FILE = OneMarketTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyingjar.OneMarketTests;
@@ -463,7 +463,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = F97K3V2UP7;
+				DEVELOPMENT_TEAM = 66E473LLXA;
 				INFOPLIST_FILE = OneMarketTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyingjar.OneMarketTests;

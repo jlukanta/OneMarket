@@ -1,11 +1,3 @@
-//
-//  OneMarketTests.swift
-//  OneMarketTests
-//
-//  Created by James Lukanta on 1/18/17.
-//  Copyright © 2017 Flying Jar Inc. All rights reserved.
-//
-
 import XCTest
 @testable import OneMarket
 
@@ -14,11 +6,14 @@ class DefaultsItemServiceTests: XCTestCase {
   
   override func setUp() {
     super.setUp()
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    // Reset UserDefaults
+    if let bundle = Bundle.main.bundleIdentifier {
+      UserDefaults.standard.removePersistentDomain(forName: bundle)
+    }
   }
   
   override func tearDown() {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     super.tearDown()
   }
   
@@ -47,11 +42,27 @@ class DefaultsItemServiceTests: XCTestCase {
     // [TODO]
   }
   
-  func testPerformanceExample() {
-    // This is an example of a performance test case.
-    self.measure {
-      // Put the code you want to measure the time of here.
-    }
+  func testCreateItem() {
+    // TODO
   }
   
+  func testSaveItem() {
+    // TODO
+  }
+  
+  func testDeleteItem() {
+    // TODO
+  }
+  
+  func testGetItemsSortedByName() {
+    // TODO
+  }
+  
+  func getItemById() {
+    // TODO
+  }
+  
+  func testGetAssignedDates() {
+    // TODO
+  }
 }
