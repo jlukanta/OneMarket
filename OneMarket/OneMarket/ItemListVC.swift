@@ -36,7 +36,7 @@ class ItemListVC: UITableViewController {
     let dates = itemService.getAssignedDates()
     
     items = dates.map {
-      (date) -> DailyItems in DailyItems(date: date, items: itemService.getItems(day: date))
+      (date) -> DailyItems in DailyItems(date: date, items: itemService.getItemsSortedByName(day: date))
     }
     
     tableView.reloadData()
