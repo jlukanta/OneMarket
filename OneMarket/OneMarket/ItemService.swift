@@ -8,6 +8,9 @@ protocol ItemService: class {
   // Persist item into storage
   func saveItem(item: Item)
   
+  // Delete an item by id
+  func deleteItem(id: String)
+  
   // Delete an item from storage
   func deleteItem(item: Item)
 
