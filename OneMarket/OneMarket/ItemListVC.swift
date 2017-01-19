@@ -1,18 +1,40 @@
 import UIKit
 
 class ItemListVC: UITableViewController {
-  private var dateToItems = Dictionary<Date, Array<Item>>()
   
   // Item service this screen will use
   public weak var itemService:ItemService!
   
+  // Data
+  private var items:[DailyItems]!
+
+  // Allows us to organize items by date
+  private struct DailyItems {
+    var date: Date
+    var items: [Item]
+  }
+
+  // Register the kind of cell that we are going to use in the list
   override func viewDidLoad () {
     super.viewDidLoad()
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellId.Item)
+  }
+  
+  // Load items list from storage
+  override func viewWillAppear(_ animated: Bool) {
+    let dates = itemService.getAssignedDates()
     
-    let item = Item(id : "test_id")
-    item.date = Date()
-    print(item.dict())
+    items = dates.map {
+      (date) -> DailyItems in itemService.getItems(day: date)
+    }
+  }
+  
+  override func numberOfSections(in tableView: UITableView) -> Int {
+    // TODO
+  }
+  
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    // TODO
   }
   
   override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
