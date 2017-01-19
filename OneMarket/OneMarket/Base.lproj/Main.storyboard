@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,6 +25,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Shopping list" id="l1g-TB-YZR">
+                        <barButtonItem key="leftBarButtonItem" title="Debug" id="0gR-HO-YbH">
+                            <connections>
+                                <segue destination="vcv-8R-htm" kind="show" id="3ze-2s-fqs"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HSe-Kv-6on">
                             <connections>
                                 <segue destination="0nO-kK-Wsa" kind="show" identifier="segue:item:add" id="mDk-bh-rLh"/>
@@ -76,11 +82,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="lf5-gz-WmX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="7mj-5G-Pys">
-                            <connections>
-                                <action selector="edit:" destination="P00-VQ-Uj8" id="xpA-Yv-vAg"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="trash" id="sKD-Kc-v13">
+                                <connections>
+                                    <action selector="remove:" destination="P00-VQ-Uj8" id="0aB-Km-D9s"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="edit" id="7mj-5G-Pys">
+                                <connections>
+                                    <action selector="edit:" destination="P00-VQ-Uj8" id="xpA-Yv-vAg"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="dateLabel" destination="aCw-cK-jbf" id="aac-5p-AXT"/>
@@ -198,6 +211,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JK3-MH-1uV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1416.8" y="26.53673163418291"/>
+        </scene>
+        <!--DebugVC-->
+        <scene sceneID="PPg-BQ-qc0">
+            <objects>
+                <viewController id="vcv-8R-htm" customClass="DebugVC" customModule="OneMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o7X-2A-yfE"/>
+                        <viewControllerLayoutGuide type="bottom" id="J4v-zw-Dlu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TR3-Vp-yeC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Debug output" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h01-xo-XoQ">
+                                <rect key="frame" x="16" y="72" width="343" height="543"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="outputLabel" destination="h01-xo-XoQ" id="FPe-jK-v4d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w4a-Qc-9Ub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581.60000000000002" y="-634.632683658171"/>
         </scene>
         <!--Root-->
         <scene sceneID="1fc-EW-kHO">

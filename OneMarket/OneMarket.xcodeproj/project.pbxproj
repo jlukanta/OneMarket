@@ -26,6 +26,7 @@
 		F1A809B61E3031C5004DC2C6 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B51E3031C5004DC2C6 /* ItemService.swift */; };
 		F1A809B91E303351004DC2C6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B81E303351004DC2C6 /* Item.swift */; };
 		F1A809BB1E303A56004DC2C6 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F1A809BA1E303A56004DC2C6 /* Cartfile */; };
+		F1E20FFB1E31836500228F60 /* DebugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E20FFA1E31836500228F60 /* DebugVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F1A809B51E3031C5004DC2C6 /* ItemService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
 		F1A809B81E303351004DC2C6 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F1A809BA1E303A56004DC2C6 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
+		F1E20FFA1E31836500228F60 /* DebugVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */,
 				F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */,
 				F10388D91E3125350013C7BD /* RootVC.swift */,
+				F1E20FFA1E31836500228F60 /* DebugVC.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E20FFB1E31836500228F60 /* DebugVC.swift in Sources */,
 				F1A809AE1E30269A004DC2C6 /* ItemEditVC.swift in Sources */,
 				F1A809B91E303351004DC2C6 /* Item.swift in Sources */,
 				E3FDDE371E2FED68002666D3 /* ItemListVC.swift in Sources */,

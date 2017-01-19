@@ -30,6 +30,14 @@ class ItemDetailsVC: UIViewController {
     performSegue(withIdentifier: SegueId.ItemEdit, sender: sender)
   }
   
+  @IBAction func remove (_ sender: UIBarButtonItem) {
+    // Delete item
+    itemService.deleteItem(id: itemId)
+    
+    // Go back to prev page
+    navigationController!.popViewController(animated: true)
+  }
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)
     
