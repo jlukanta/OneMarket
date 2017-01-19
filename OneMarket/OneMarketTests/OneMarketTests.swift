@@ -9,8 +9,8 @@
 import XCTest
 @testable import OneMarket
 
-class JsonItemServiceTests: XCTestCase {
-  let service = JsonItemService()
+class DefaultsItemServiceTests: XCTestCase {
+  let service = DefaultsItemService()
   
   override func setUp() {
     super.setUp()
@@ -23,7 +23,7 @@ class JsonItemServiceTests: XCTestCase {
   }
   
   func testAddItem() {
-    let service = JsonItemService()
+    let service = DefaultsItemService()
     
     let item1 = service.createItem()
     item1.name = "Test Item 1"

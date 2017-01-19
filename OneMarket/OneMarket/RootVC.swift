@@ -4,7 +4,7 @@ import UIKit
 // This is the first view controller to be loaded
 // Initialize/resolve all dependencies here
 class RootVC: UINavigationController {
-  private var itemService = JsonItemService() as ItemService
+  private var itemService = DefaultsItemService() as ItemService
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)

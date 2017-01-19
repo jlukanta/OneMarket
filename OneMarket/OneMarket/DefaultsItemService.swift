@@ -1,6 +1,6 @@
 import UIKit
 
-class JsonItemService: NSObject, ItemService {
+class DefaultsItemService: NSObject, ItemService {
   let defaults = UserDefaults.standard
   
   func createItem() -> Item {
