@@ -11,8 +11,8 @@ class ItemDetailsVC: UIViewController {
   // The ID of the item we are viewing
   public var itemId:String!
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     
     // Load item
     guard let item = itemService.getItem(id: itemId) else {

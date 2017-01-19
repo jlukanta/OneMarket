@@ -11,8 +11,8 @@ class ItemAddVC: UIViewController {
   // The item we're editing
   private var item:Item!
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     
     // Use a fresh item
     item = itemService.createItem()

@@ -14,8 +14,8 @@ class ItemEditVC: UIViewController {
   // The item we are editing
   private var item:Item!
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     
     // Load item
     item = itemService.getItem(id: itemId)
