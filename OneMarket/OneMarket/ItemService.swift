@@ -1,5 +1,6 @@
 import Foundation
 
+// Manages items
 protocol ItemService: class {
   // Create an item template (but not save it)
   func createItem() -> Item
@@ -11,8 +12,8 @@ protocol ItemService: class {
   func deleteItem(item: Item)
 
   // Get an array of all items
-  func getItems() -> [Item]
+  func getItems(day:Date?) -> [Item]
   
   // Get a single item
-  func getItem(id:String) -> Item
+  func getItem(id:String) -> Item?
 }

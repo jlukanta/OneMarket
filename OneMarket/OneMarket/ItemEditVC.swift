@@ -21,7 +21,9 @@ class ItemEditVC: UIViewController {
     item = itemService.getItem(id: itemId)
     nameInput.text = item.name
     locationInput.text = item.location
-    dateInput.date = item.date
+    if let date = item.date {
+      dateInput.date = date
+    }
     
     // Start editing name from the get-go
     nameInput.becomeFirstResponder()
