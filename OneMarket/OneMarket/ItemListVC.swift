@@ -4,7 +4,7 @@ class ItemListVC: UITableViewController {
   private var dateToItems = Dictionary<Date, Array<Item>>()
   
   // Item service this screen will use
-  public weak var itemService:ItemService?
+  public weak var itemService:ItemService!
   
   override func viewDidLoad () {
     super.viewDidLoad()
@@ -25,7 +25,16 @@ class ItemListVC: UITableViewController {
     return cell
   }
   
-  @IBAction func add (_ sender: UIBarButtonItem) {
-    performSegue(withIdentifier: SegueId.ItemAdd, sender: sender)
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+    
+    if (segue.identifier == SegueId.ItemAdd) {
+      let itemAddVC = segue.destination as! ItemAddVC
+      itemAddVC.itemService = itemService
+    } else if (segue.identifier == SegueId.ItemDetails) {
+      let itemDetailsVC = segue.destination as! ItemDetailsVC
+      itemDetailsVC.itemService = itemService
+      // TODO: Set the item's ID  (itemDetailsVc.itemId = ...)
+    }
   }
 }

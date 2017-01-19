@@ -26,14 +26,13 @@
                     <navigationItem key="navigationItem" title="Shopping list" id="l1g-TB-YZR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HSe-Kv-6on">
                             <connections>
-                                <action selector="add:" destination="vI9-hX-vwg" id="5Sg-QM-vou"/>
+                                <segue destination="0nO-kK-Wsa" kind="show" identifier="segue:item:add" id="mDk-bh-rLh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="P00-VQ-Uj8" kind="show" identifier="segue:item:details" id="zWC-yX-u7Z"/>
-                        <segue destination="0nO-kK-Wsa" kind="show" identifier="segue:item:add" id="7oU-Xc-xOf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zX-PZ-EFc" userLabel="First Responder" sceneMemberID="firstResponder"/>

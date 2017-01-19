@@ -14,7 +14,7 @@ class ItemDetailsVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Use a fresh item
+    // Load item
     guard let item = itemService.getItem(id: itemId) else {
       // TODO: Indicate to the user failure to load item
       print("Failed to load item")
@@ -28,5 +28,15 @@ class ItemDetailsVC: UIViewController {
   
   @IBAction func edit (_ sender: UIBarButtonItem) {
     performSegue(withIdentifier: SegueId.ItemEdit, sender: sender)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+    
+    if (segue.identifier == SegueId.ItemEdit) {
+      let itemEditVC = segue.destination as! ItemEditVC
+      itemEditVC.itemService = itemService
+      itemEditVC.itemId = itemId
+    }
   }
 }
