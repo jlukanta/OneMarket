@@ -1,2 +1,2 @@
-github "CosmicMind/Material"
-github "boxenjim/SwiftyFaker"
+github "Swinject/Swinject" "2.0.0"
+github "Swinject/SwinjectStoryboard" "1.0.0"
