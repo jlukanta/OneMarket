@@ -12,6 +12,17 @@ class ItemListVC: UITableViewController {
   private struct DailyItems {
     var date: Date
     var items: [Item]
+    
+    init (date: Date, items: [Item]) {
+      self.date = date
+      self.items = items
+    }
+  }
+  
+  // User has selected a cell -- de-select it and show details page
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+    performSegue(withIdentifier: SegueId.ItemDetails, sender: self)
   }
 
   // Register the kind of cell that we are going to use in the list
@@ -25,25 +36,30 @@ class ItemListVC: UITableViewController {
     let dates = itemService.getAssignedDates()
     
     items = dates.map {
-      (date) -> DailyItems in itemService.getItems(day: date)
+      (date) -> DailyItems in DailyItems(date: date, items: itemService.getItems(day: date))
     }
   }
   
+  // Number of sections (i.e. the various different days)
   override func numberOfSections(in tableView: UITableView) -> Int {
-    // TODO
+    return items.count
   }
   
-  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    // TODO
+  // Title of sections (i.e. what the day is)
+  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return String(describing: items[section].date)
   }
   
   override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 30
+    return items[section].items.count
   }
   
+  // Display cell (with item name)
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: CellId.Item)!
-    cell.textLabel!.text = "Item #" + String(indexPath.row)
+    let item = items[indexPath.section].items[indexPath.row]
+    
+    cell.textLabel!.text = item.name
     return cell
   }
   
@@ -51,12 +67,22 @@ class ItemListVC: UITableViewController {
     super.prepare(for: segue, sender: sender)
     
     if (segue.identifier == SegueId.ItemAdd) {
-      let itemAddVC = segue.destination as! ItemAddVC
-      itemAddVC.itemService = itemService
+      prepareItemAdd(vc: segue.destination as! ItemAddVC)
     } else if (segue.identifier == SegueId.ItemDetails) {
-      let itemDetailsVC = segue.destination as! ItemDetailsVC
-      itemDetailsVC.itemService = itemService
-      // TODO: Set the item's ID  (itemDetailsVc.itemId = ...)
+      prepareItemDetails(vc: segue.destination as! ItemDetailsVC)
     }
+  }
+
+  // Prepare transition to add item screen
+  private func prepareItemAdd (vc: ItemAddVC) {
+    vc.itemService = itemService
+  }
+  
+  // Prepare transition
+  private func prepareItemDetails (vc: ItemDetailsVC) {
+    let indexPath = tableView.indexPathForSelectedRow!
+    let item = items[indexPath.section].items[indexPath.row]
+    vc.itemService = itemService
+    vc.itemId = item.id
   }
 }
