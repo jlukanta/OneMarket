@@ -6,11 +6,11 @@ import UIKit
 class RootVC: UINavigationController {
   private var itemService = DefaultsItemService() as ItemService
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    super.prepare(for: segue, sender: sender)
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
     // Inject dependencies to root view controller
-    let itemList = segue.destination as! ItemListVC
+    let itemList = topViewController as! ItemListVC
     itemList.itemService = itemService
   }
 }
