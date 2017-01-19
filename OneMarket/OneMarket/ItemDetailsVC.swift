@@ -15,7 +15,9 @@ class ItemDetailsVC: UIViewController {
     super.viewDidLoad()
     
     // Use a fresh item
-    let item = itemService.getItem(id: itemId)
+    guard let item = itemService.getItem(id: itemId) else {
+      return;
+    }
     nameLabel.text = item.name
     locationLabel.text = item.location
     dateLabel.text = String(describing: item.date)

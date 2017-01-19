@@ -11,8 +11,8 @@ protocol ItemService {
   func deleteItem(item: Item)
 
   // Get an array of all items
-  func getItems(day:Date) -> [Item]
+  func getItems(day:Date?) -> [Item]
   
   // Get a single item
-  func getItem(id:String) -> Item
+  func getItem(id:String) -> Item?
 }

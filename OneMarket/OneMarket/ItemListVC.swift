@@ -1,9 +1,15 @@
 import UIKit
 
 class ItemListVC: UITableViewController {
+  var dateToItems : Dictionary<Date, Array<Item>> = [:]
+  
   override func viewDidLoad () {
     super.viewDidLoad()
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellId.Item)
+    
+    let item = Item(id : "test_id")
+    item.date = Date()
+    print(item.dict())
   }
   
   override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
