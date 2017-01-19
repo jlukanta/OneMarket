@@ -77,7 +77,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="lf5-gz-WmX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="7mj-5G-Pys"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="7mj-5G-Pys">
+                            <connections>
+                                <action selector="edit:" destination="P00-VQ-Uj8" id="xpA-Yv-vAg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dateLabel" destination="aCw-cK-jbf" id="aac-5p-AXT"/>

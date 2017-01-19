@@ -12,4 +12,7 @@ protocol ItemService {
 
   // Get an array of all items
   func getItems() -> [Item]
+  
+  // Get a single item
+  func getItem(id:String) -> Item
 }
