@@ -203,8 +203,8 @@
         <!--Root-->
         <scene sceneID="1fc-EW-kHO">
             <objects>
-                <navigationController title="Root" id="Q15-Se-t24" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yt6-e8-QYR">
+                <navigationController title="Root" id="Q15-Se-t24" customClass="RootVC" customModule="OneMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yt6-e8-QYR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

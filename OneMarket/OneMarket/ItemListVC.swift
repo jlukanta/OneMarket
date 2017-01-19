@@ -1,7 +1,8 @@
 import UIKit
 
 class ItemListVC: UITableViewController {
-  var dateToItems : Dictionary<Date, Array<Item>> = [:]
+  var dateToItems = Dictionary<Date, Array<Item>>()
+  var itemService:ItemService?
   
   override func viewDidLoad () {
     super.viewDidLoad()
