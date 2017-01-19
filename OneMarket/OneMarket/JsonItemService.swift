@@ -7,45 +7,91 @@ class JsonItemService: NSObject, ItemService {
     return Item(id : UUID().uuidString)
   }
   
+  // Ids helper
+  
   func day(_ date: Date?) -> Date {
     let date = date ?? Date.distantFuture
     return Calendar.current.startOfDay(for: date)
   }
   
-  func key(_ date: Date?) -> String {
+  func idsKey(_ date: Date?) -> String {
     let dayInt = Int(day(date).timeIntervalSince1970)
-    let dayKey = "om \(dayInt)"
+    let dayKey = "om.day.\(dayInt)"
     return dayKey
   }
   
-  func saveItem(item: Item) {
-    let key = self.key(item.date)
-    var items = UserDefaults.standard.array(forKey: key) ?? []
-    items.append(item)
-    UserDefaults.standard.set(items, forKey: key)
+  func getIds(_ date: Date?) -> [String] {
+    let key = self.idsKey(date)
+    return UserDefaults.standard.array(forKey: key) as? [String] ?? []
   }
   
-  func deleteItem(item: Item) {
-    let key = self.key(item.date)
-    var items = UserDefaults.standard.array(forKey: key) ?? []
-    items = items.filter { (obj) -> Bool in
-      guard let itemDict = obj as? [String: Any] else {
-        return false
-      }
-      guard let storedId = itemDict["id"] as? String else {
-        return false
-      }
+  func setIds(ids: [String], date: Date?) {
+    UserDefaults.standard.set(ids, forKey: idsKey(date))
+  }
+  
+  func addId(item: Item) {
+    var ids = getIds(item.date)
+    ids.append(item.id)
+    setIds(ids: ids, date: item.date)
+  }
+  
+  func delId(item: Item) {
+    let ids = getIds(item.date).filter { (storedId: String) -> Bool in
       return storedId != item.id
     }
-    UserDefaults.standard.set(items, forKey: key)
+    setIds(ids: ids, date: item.date)
   }
   
+  // Info helper
+  
+  func infoKey(_ id: String) -> String {
+    return "om.item.\(id)";
+  }
+  
+  func getInfo(id: String) -> [String: Any?]? {
+    return UserDefaults.standard.dictionary(forKey: infoKey(id))
+  }
+  
+  func setInfo(item: Item) {
+    UserDefaults.standard.set(item.dict(), forKey: infoKey(item.id))
+  }
+  
+  func delInfo(id: String) {
+    UserDefaults.standard.removeObject(forKey: infoKey(id))
+  }
+  
+  // Save Item
+  
+  func saveItem(item: Item) {
+    addId(item: item)
+    setInfo(item: item)
+  }
+  
+  // Delete Item
+  
+  func deleteItem(item: Item) {
+    delId(item: item)
+    delInfo(id: item.id)
+  }
+  
+  // Get Items
+  
   func getItems(day: Date?) -> [Item] {
-    let key = self.key(day)
-    return UserDefaults.standard.array(forKey: key) as? [Item] ?? []
+    let ids = getIds(day)
+    var items : [Item] = []
+    for id in ids {
+      guard let item = getItem(id: id) else {
+        continue
+      }
+      items.append(item)
+    }
+    return items
   }
   
   func getItem(id: String) -> Item? {
-    return Item(id : "test")
+    guard let info = getInfo(id: id) else {
+      return nil
+    }
+    return Item.makeFromDict(info)
   }
 }

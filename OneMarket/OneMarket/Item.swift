@@ -11,6 +11,10 @@ class Item {
     self.id = id
   }
   
+  static func makeFromDict(_ dict : [String: Any?]) -> Item? {
+    return nil // [TODO] Implement this
+  }
+  
   // Get a dictionary representation of this item
   func dict() -> [String : Any?] {
     return [
