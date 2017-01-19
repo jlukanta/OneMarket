@@ -5,7 +5,34 @@ class ItemEditVC: UIViewController {
   @IBOutlet weak var locationInput:UITextField!
   @IBOutlet weak var dateInput:UIDatePicker!
   
+  // Item service this screen will use
+  public var itemService:ItemService!
+  
+  // The ID of the item we are viewing
+  public var itemId:String!
+  
+  // The item we are editing
+  var item:Item!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    // Load item
+    item = itemService.getItem(id: itemId)
+    nameInput.text = item.name
+    locationInput.text = item.location
+    dateInput.date = item.date
+    
+    // Start editing name from the get-go
+    nameInput.becomeFirstResponder()
+  }
+  
   @IBAction func save (_ sender: UIBarButtonItem) {
+    
+    // Persist changes
+    itemService.saveItem(item: item)
+    
+    // Go back to previous page
     navigationController!.popViewController(animated: true)
   }
 }

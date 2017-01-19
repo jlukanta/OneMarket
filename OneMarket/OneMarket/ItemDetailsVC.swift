@@ -22,6 +22,6 @@ class ItemDetailsVC: UIViewController {
   }
   
   @IBAction func edit (_ sender: UIBarButtonItem) {
-    // TODO
+    performSegue(withIdentifier: SegueId.ItemEdit, sender: sender)
   }
 }
