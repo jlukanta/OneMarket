@@ -22,19 +22,21 @@ class ItemListVC: UITableViewController {
   
   // Load items list from storage
   override func viewWillAppear(_ animated: Bool) {
-    let dates = itemService.getAssignedDates()
-    
-    items = dates.map {
-      (date) -> DailyItems in itemService.getItems(day: date)
-    }
+//    let dates = itemService.getAssignedDates()
+//    
+//    items = dates.map {
+//      (date) -> DailyItems in itemService.getItems(day: date)
+//    }
   }
   
   override func numberOfSections(in tableView: UITableView) -> Int {
     // TODO
+    return 1;
   }
   
-  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     // TODO
+    return nil;
   }
   
   override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {

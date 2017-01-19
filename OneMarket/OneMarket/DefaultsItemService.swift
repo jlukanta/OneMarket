@@ -48,7 +48,7 @@ class DefaultsItemService: NSObject, ItemService {
     return "om.item.\(id)";
   }
   
-  func getInfo(id: String) -> [String: Any?]? {
+  func getInfo(id: String) -> [String: Any]? {
     return UserDefaults.standard.dictionary(forKey: infoKey(id))
   }
   
@@ -88,10 +88,17 @@ class DefaultsItemService: NSObject, ItemService {
     return items
   }
   
+  // Get Item
+  
   func getItem(id: String) -> Item? {
     guard let info = getInfo(id: id) else {
       return nil
     }
     return Item.makeFromDict(info)
+  }
+  
+  // Get a (sorted) array of dates that have items assigned to them
+  func getAssignedDates () -> [Date] {
+    return [] // [TODO] Implement this
   }
 }
