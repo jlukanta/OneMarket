@@ -130,6 +130,13 @@ class DefaultsItemService: NSObject, ItemService {
   
   // Delete Item
   
+  func deleteItem(id: String) {
+    guard let item = getItem(id: id) else {
+      return;
+    }
+    deleteItem(item: item)
+  }
+  
   func deleteItem(item: Item) {
     if delId(item: item) <= 0 {
       delDate(item.date)
