@@ -21,6 +21,7 @@
 		F1A809B61E3031C5004DC2C6 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B51E3031C5004DC2C6 /* ItemService.swift */; };
 		F1A809B91E303351004DC2C6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B81E303351004DC2C6 /* Item.swift */; };
 		F1A809BB1E303A56004DC2C6 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = F1A809BA1E303A56004DC2C6 /* Cartfile */; };
+		F1A809BD1E303C09004DC2C6 /* FakeItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809BC1E303C09004DC2C6 /* FakeItemService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		F1A809B51E3031C5004DC2C6 /* ItemService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
 		F1A809B81E303351004DC2C6 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F1A809BA1E303A56004DC2C6 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
+		F1A809BC1E303C09004DC2C6 /* FakeItemService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeItemService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				F1A809B51E3031C5004DC2C6 /* ItemService.swift */,
+				F1A809BC1E303C09004DC2C6 /* FakeItemService.swift */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1A809AE1E30269A004DC2C6 /* ItemEditVC.swift in Sources */,
+				F1A809BD1E303C09004DC2C6 /* FakeItemService.swift in Sources */,
 				F1A809B91E303351004DC2C6 /* Item.swift in Sources */,
 				E3FDDE371E2FED68002666D3 /* ItemListVC.swift in Sources */,
 				F1A809B11E302F42004DC2C6 /* SegueId.swift in Sources */,

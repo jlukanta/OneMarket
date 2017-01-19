@@ -6,7 +6,7 @@ class ItemDetailsVC: UIViewController {
   @IBOutlet weak var dateLabel:UILabel!
   
   // Item service this screen will use
-  public var itemService:ItemService!
+  public weak var itemService:ItemService!
   
   // The ID of the item we are viewing
   public var itemId:String!
