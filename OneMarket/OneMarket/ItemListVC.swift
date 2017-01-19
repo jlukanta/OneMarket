@@ -38,6 +38,8 @@ class ItemListVC: UITableViewController {
     items = dates.map {
       (date) -> DailyItems in DailyItems(date: date, items: itemService.getItems(day: date))
     }
+    
+    tableView.reloadData()
   }
   
   // Number of sections (i.e. the various different days)
