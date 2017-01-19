@@ -1,11 +1,3 @@
-//
-//  JsonItemService.swift
-//  OneMarket
-//
-//  Created by James Lukanta on 1/18/17.
-//  Copyright © 2017 Flying Jar Inc. All rights reserved.
-//
-
 import UIKit
 
 class JsonItemService: NSObject, ItemService {

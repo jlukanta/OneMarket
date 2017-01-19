@@ -1,6 +1,7 @@
 import Foundation
 
-protocol ItemService {
+// Manages items
+protocol ItemService: class {
   // Create an item template (but not save it)
   func createItem() -> Item
   

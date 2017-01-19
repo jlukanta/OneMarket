@@ -6,10 +6,12 @@ class Item {
   public var location:String?
   public var date:Date?
   
+  // Initialize new item
   init(id : String) {
     self.id = id
   }
   
+  // Get a dictionary representation of this item
   func dict() -> [String : Any?] {
     return [
       "id" : id,

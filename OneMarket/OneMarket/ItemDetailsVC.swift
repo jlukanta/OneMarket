@@ -6,24 +6,37 @@ class ItemDetailsVC: UIViewController {
   @IBOutlet weak var dateLabel:UILabel!
   
   // Item service this screen will use
-  public var itemService:ItemService!
+  public weak var itemService:ItemService!
   
   // The ID of the item we are viewing
   public var itemId:String!
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     
-    // Use a fresh item
+    // Load item
     guard let item = itemService.getItem(id: itemId) else {
+      // TODO: Indicate to the user failure to load item
+      print("Failed to load item")
       return;
     }
+    
     nameLabel.text = item.name
     locationLabel.text = item.location
     dateLabel.text = String(describing: item.date)
   }
   
   @IBAction func edit (_ sender: UIBarButtonItem) {
-    // TODO
+    performSegue(withIdentifier: SegueId.ItemEdit, sender: sender)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+    
+    if (segue.identifier == SegueId.ItemEdit) {
+      let itemEditVC = segue.destination as! ItemEditVC
+      itemEditVC.itemService = itemService
+      itemEditVC.itemId = itemId
+    }
   }
 }

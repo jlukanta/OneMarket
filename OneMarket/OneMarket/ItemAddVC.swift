@@ -6,13 +6,13 @@ class ItemAddVC: UIViewController {
   @IBOutlet weak var dateInput:UIDatePicker!
   
   // Item service this screen will use
-  public var itemService:ItemService!
+  public weak var itemService:ItemService!
   
   // The item we're editing
-  var item:Item!
+  private var item:Item!
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     
     // Use a fresh item
     item = itemService.createItem()
@@ -22,7 +22,6 @@ class ItemAddVC: UIViewController {
       dateInput.date = date
     }
     
-
     // Start editing name from the get-go
     nameInput.becomeFirstResponder()
   }
