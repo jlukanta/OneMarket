@@ -21,7 +21,6 @@ class ItemListVC: UITableViewController {
   
   // User has selected a cell -- de-select it and show details page
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    tableView.deselectRow(at: indexPath, animated: true)
     performSegue(withIdentifier: SegueId.ItemDetails, sender: self)
   }
 
@@ -75,12 +74,12 @@ class ItemListVC: UITableViewController {
     }
   }
 
-  // Prepare transition to add item screen
+  // Prepare transition to add screen
   private func prepareItemAdd (vc: ItemAddVC) {
     vc.itemService = itemService
   }
   
-  // Prepare transition
+  // Prepare transition to details screen
   private func prepareItemDetails (vc: ItemDetailsVC) {
     let indexPath = tableView.indexPathForSelectedRow!
     let item = items[indexPath.section].items[indexPath.row]
