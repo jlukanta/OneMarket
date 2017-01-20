@@ -50,7 +50,10 @@ class DefaultsItemServiceTests: XCTestCase {
     item.name = "New name"
     service.saveItem(item: item)
     
+    // Should update property
     XCTAssert(service.getItem(id: item.id)!.name == "New name")
+    
+    // Should not magically add a new item
     XCTAssert(service.getItems(day: date).count == 1)
   }
   
@@ -106,6 +109,7 @@ class DefaultsItemServiceTests: XCTestCase {
     
     let dates = service.getAssignedDates()
     
+    // Should return all dates assigned to items, plus Date.distantFuture
     XCTAssert(dates[0] == date1)
     XCTAssert(dates[1] == date2)
     XCTAssert(dates[2] == Date.distantFuture)
