@@ -40,7 +40,7 @@ class DefaultsItemService: NSObject, ItemService {
   }
   
   func addDate(_ date: Date?) {
-    let date = date ?? Date.distantFuture
+    let date = day(date)
     var dates = getDates()
     guard !dates.contains(date) else {
       return;
@@ -50,7 +50,7 @@ class DefaultsItemService: NSObject, ItemService {
   }
   
   func delDate(_ date: Date?) {
-    let date = date ?? Date.distantFuture
+    let date = day(date)
     var dates = getDates()
     guard let index = dates.index(of: date) else {
       return;

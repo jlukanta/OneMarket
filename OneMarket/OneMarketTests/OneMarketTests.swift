@@ -6,7 +6,15 @@ class DefaultsItemServiceTests: XCTestCase {
   
   override func setUp() {
     super.setUp()
-    
+    clearData()
+  }
+  
+  override func tearDown() {
+    super.tearDown()
+    clearData()
+  }
+  
+  func clearData () {
     // Reset UserDefaults
     if let bundle = Bundle.main.bundleIdentifier {
       UserDefaults.standard.removePersistentDomain(forName: bundle)
