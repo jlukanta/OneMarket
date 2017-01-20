@@ -20,6 +20,8 @@
 		F1016F811E2FF3BD000BBD63 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1016F801E2FF3BD000BBD63 /* ItemDetailsVC.swift */; };
 		F10388DA1E3125350013C7BD /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10388D91E3125350013C7BD /* RootVC.swift */; };
 		F13C66FE1E2FF66100443D0E /* ItemAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */; };
+		F19522A61E31B319005264F5 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19522A41E31B319005264F5 /* Swinject.framework */; };
+		F19522A71E31B319005264F5 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19522A51E31B319005264F5 /* SwinjectStoryboard.framework */; };
 		F1A809AE1E30269A004DC2C6 /* ItemEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */; };
 		F1A809B11E302F42004DC2C6 /* SegueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B01E302F42004DC2C6 /* SegueId.swift */; };
 		F1A809B31E302FB1004DC2C6 /* CellId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B21E302FB1004DC2C6 /* CellId.swift */; };
@@ -54,6 +56,8 @@
 		F1016F801E2FF3BD000BBD63 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
 		F10388D91E3125350013C7BD /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 		F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAddVC.swift; sourceTree = "<group>"; };
+		F19522A41E31B319005264F5 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = ../Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		F19522A51E31B319005264F5 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = ../Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 		F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemEditVC.swift; sourceTree = "<group>"; };
 		F1A809B01E302F42004DC2C6 /* SegueId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueId.swift; sourceTree = "<group>"; };
 		F1A809B21E302FB1004DC2C6 /* CellId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellId.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19522A61E31B319005264F5 /* Swinject.framework in Frameworks */,
+				F19522A71E31B319005264F5 /* SwinjectStoryboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +94,7 @@
 				E3FDDE481E2FED68002666D3 /* OneMarketTests */,
 				E3FDDE321E2FED68002666D3 /* Products */,
 				F1A809BA1E303A56004DC2C6 /* Cartfile */,
+				F19522A31E31B319005264F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +143,15 @@
 				F1E20FFA1E31836500228F60 /* DebugVC.swift */,
 			);
 			name = controllers;
+			sourceTree = "<group>";
+		};
+		F19522A31E31B319005264F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F19522A41E31B319005264F5 /* Swinject.framework */,
+				F19522A51E31B319005264F5 /* SwinjectStoryboard.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F1A809AF1E302F35004DC2C6 /* config */ = {
