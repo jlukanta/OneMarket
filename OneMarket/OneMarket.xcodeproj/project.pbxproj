@@ -20,8 +20,8 @@
 		F1016F811E2FF3BD000BBD63 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1016F801E2FF3BD000BBD63 /* ItemDetailsVC.swift */; };
 		F10388DA1E3125350013C7BD /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10388D91E3125350013C7BD /* RootVC.swift */; };
 		F13C66FE1E2FF66100443D0E /* ItemAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */; };
-		F19522A61E31B319005264F5 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19522A41E31B319005264F5 /* Swinject.framework */; };
-		F19522A71E31B319005264F5 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19522A51E31B319005264F5 /* SwinjectStoryboard.framework */; };
+		F19522B01E31B479005264F5 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19522AE1E31B479005264F5 /* Swinject.framework */; };
+		F19522B11E31B479005264F5 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19522AF1E31B479005264F5 /* SwinjectStoryboard.framework */; };
 		F1A809AE1E30269A004DC2C6 /* ItemEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */; };
 		F1A809B11E302F42004DC2C6 /* SegueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B01E302F42004DC2C6 /* SegueId.swift */; };
 		F1A809B31E302FB1004DC2C6 /* CellId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B21E302FB1004DC2C6 /* CellId.swift */; };
@@ -41,6 +41,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F19522AC1E31B406005264F5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E3FDDE311E2FED68002666D3 /* OneMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FDDE341E2FED68002666D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +69,8 @@
 		F1016F801E2FF3BD000BBD63 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
 		F10388D91E3125350013C7BD /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 		F13C66FD1E2FF66100443D0E /* ItemAddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAddVC.swift; sourceTree = "<group>"; };
-		F19522A41E31B319005264F5 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = ../Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
-		F19522A51E31B319005264F5 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = ../Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
+		F19522AE1E31B479005264F5 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = ../Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		F19522AF1E31B479005264F5 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = ../Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 		F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemEditVC.swift; sourceTree = "<group>"; };
 		F1A809B01E302F42004DC2C6 /* SegueId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueId.swift; sourceTree = "<group>"; };
 		F1A809B21E302FB1004DC2C6 /* CellId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellId.swift; sourceTree = "<group>"; };
@@ -72,8 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F19522A61E31B319005264F5 /* Swinject.framework in Frameworks */,
-				F19522A71E31B319005264F5 /* SwinjectStoryboard.framework in Frameworks */,
+				F19522B01E31B479005264F5 /* Swinject.framework in Frameworks */,
+				F19522B11E31B479005264F5 /* SwinjectStoryboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +107,7 @@
 				E3FDDE481E2FED68002666D3 /* OneMarketTests */,
 				E3FDDE321E2FED68002666D3 /* Products */,
 				F1A809BA1E303A56004DC2C6 /* Cartfile */,
-				F19522A31E31B319005264F5 /* Frameworks */,
+				F19522AD1E31B478005264F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,11 +158,11 @@
 			name = controllers;
 			sourceTree = "<group>";
 		};
-		F19522A31E31B319005264F5 /* Frameworks */ = {
+		F19522AD1E31B478005264F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F19522A41E31B319005264F5 /* Swinject.framework */,
-				F19522A51E31B319005264F5 /* SwinjectStoryboard.framework */,
+				F19522AE1E31B479005264F5 /* Swinject.framework */,
+				F19522AF1E31B479005264F5 /* SwinjectStoryboard.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,6 +203,8 @@
 				E3FDDE2D1E2FED67002666D3 /* Sources */,
 				E3FDDE2E1E2FED67002666D3 /* Frameworks */,
 				E3FDDE2F1E2FED67002666D3 /* Resources */,
+				F19522AC1E31B406005264F5 /* Embed Frameworks */,
+				F19522B21E31B488005264F5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -280,6 +295,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F19522B21E31B488005264F5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/SwinjectStoryboard.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E3FDDE2D1E2FED67002666D3 /* Sources */ = {
@@ -441,6 +474,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 66E473LLXA;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = OneMarket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyingjar.OneMarket;
@@ -455,6 +489,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 66E473LLXA;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = OneMarket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyingjar.OneMarket;
