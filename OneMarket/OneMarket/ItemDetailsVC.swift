@@ -6,7 +6,7 @@ class ItemDetailsVC: UIViewController {
   @IBOutlet weak var dateLabel:UILabel!
   
   // Item service this screen will use
-  public weak var itemService:ItemService!
+  public var itemService:ItemService!
   
   // The ID of the item we are viewing
   public var itemId:String!
@@ -41,9 +41,9 @@ class ItemDetailsVC: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)
     
+    // Prepare transition to edit screen
     if (segue.identifier == SegueId.ItemEdit) {
       let itemEditVC = segue.destination as! ItemEditVC
-      itemEditVC.itemService = itemService
       itemEditVC.itemId = itemId
     }
   }

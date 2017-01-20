@@ -6,7 +6,7 @@ class ItemEditVC: UIViewController {
   @IBOutlet weak var dateInput:UIDatePicker!
   
   // Item service this screen will use
-  public weak var itemService:ItemService!
+  public var itemService:ItemService!
   
   // The ID of the item we are viewing
   public var itemId:String!

@@ -6,7 +6,7 @@ class ItemAddVC: UIViewController {
   @IBOutlet weak var dateInput:UIDatePicker!
   
   // Item service this screen will use
-  public weak var itemService:ItemService!
+  public var itemService:ItemService!
   
   // The item we're editing
   private var item:Item!

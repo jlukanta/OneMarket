@@ -3,7 +3,7 @@ import UIKit
 class ItemListVC: UITableViewController {
   
   // Item service this screen will use
-  public weak var itemService:ItemService!
+  public var itemService:ItemService!
   
   // Data
   private var items:[DailyItems]!
@@ -67,23 +67,12 @@ class ItemListVC: UITableViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)
     
-    if (segue.identifier == SegueId.ItemAdd) {
-      prepareItemAdd(vc: segue.destination as! ItemAddVC)
-    } else if (segue.identifier == SegueId.ItemDetails) {
-      prepareItemDetails(vc: segue.destination as! ItemDetailsVC)
+    // Prepare transition to details screen
+    if (segue.identifier == SegueId.ItemDetails) {
+      let vc = segue.destination as! ItemDetailsVC
+      let indexPath = tableView.indexPathForSelectedRow!
+      let item = items[indexPath.section].items[indexPath.row]
+      vc.itemId = item.id
     }
-  }
-
-  // Prepare transition to add screen
-  private func prepareItemAdd (vc: ItemAddVC) {
-    vc.itemService = itemService
-  }
-  
-  // Prepare transition to details screen
-  private func prepareItemDetails (vc: ItemDetailsVC) {
-    let indexPath = tableView.indexPathForSelectedRow!
-    let item = items[indexPath.section].items[indexPath.row]
-    vc.itemService = itemService
-    vc.itemId = item.id
   }
 }
