@@ -22,6 +22,8 @@
 		F19522B01E31B479005264F5 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19522AE1E31B479005264F5 /* Swinject.framework */; };
 		F19522B11E31B479005264F5 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19522AF1E31B479005264F5 /* SwinjectStoryboard.framework */; };
 		F19522B41E31B6A7005264F5 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19522B31E31B6A7005264F5 /* Container.swift */; };
+		F19522B51E31BCC1005264F5 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19522AE1E31B479005264F5 /* Swinject.framework */; };
+		F19522B61E31BCC1005264F5 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19522AF1E31B479005264F5 /* SwinjectStoryboard.framework */; };
 		F1A809AE1E30269A004DC2C6 /* ItemEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809AD1E30269A004DC2C6 /* ItemEditVC.swift */; };
 		F1A809B11E302F42004DC2C6 /* SegueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B01E302F42004DC2C6 /* SegueId.swift */; };
 		F1A809B31E302FB1004DC2C6 /* CellId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A809B21E302FB1004DC2C6 /* CellId.swift */; };
@@ -94,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19522B51E31BCC1005264F5 /* Swinject.framework in Frameworks */,
+				F19522B61E31BCC1005264F5 /* SwinjectStoryboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +508,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 66E473LLXA;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = OneMarketTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyingjar.OneMarketTests;
@@ -519,6 +524,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 66E473LLXA;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = OneMarketTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flyingjar.OneMarketTests;

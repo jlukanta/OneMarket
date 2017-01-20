@@ -40,16 +40,18 @@ class DefaultsItemServiceTests: XCTestCase {
   
   func testUpdateItem() {
     let service = DefaultsItemService()
+    let date = Calendar.current.startOfDay(for:Date(timeIntervalSince1970: 123450000))
     
     let item = service.createItem()
     item.name = "Test item"
-    item.date = Date(timeIntervalSince1970: 123450000)
+    item.date = date
     service.saveItem(item: item)
     
     item.name = "New name"
     service.saveItem(item: item)
     
     XCTAssert(service.getItem(id: item.id)!.name == "New name")
+    XCTAssert(service.getItems(day: date).count == 1)
   }
   
   func testDeleteItem() {
